@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>css一些有趣的冷知识</title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="demo demo0">
+		这是测试calc()函数：css样式计算。<br><br>
+		代码：<br>
+		height: calc(100% - 500px);<br><br>
+		效果与作用： 查看页面的设备不同（或窗口大小不同），高度不同，它也将随着计算变化,该元素的高度始终为父元素减去500px。
+		<br>
+		注意： 若将元素position属性设置为relative或static（默认）将会是calc计算失效，absolute, fixed可以。
+		<strong>使用calc(100% + 100px);这样的形式效果最好，还可以与不同设备进行自适应。awsome！</strong>
+	</div>
+
+	<div class="demo demo1">
+		这里也用到了calc()函数计算样式中top属性。
+		测试模糊文字。<br><br>
+		原理： text-shadow属性配合前景色透明实现滤镜效果。<br>
+		代码：<br>
+		top: calc(100% - 350px);<br>
+		height: 350px;<br>
+		color: transparent;<br>
+		text-shadow: 0 0 2px #ff00ff;<br>
+		<br><br>
+	</div>
+
+	<div class="demo demo2">
+		<h3>测试多重边框</h3>
+		<p>原理是利用box-shadow这一属性进行不断叠加扩大，从而产生以下效果。</p>
+		<code>
+			代码如下：<br>
+			.demo.demo2 {<br>
+			height: 666px;<br>
+			top: calc(100% + 150px);<br>
+			box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.2),<br>
+						0 0 0 20px rgba(0, 0, 0, 0.2),<br>
+						0 0 0 30px rgba(0, 0, 0, 0.2),<br>
+						0 0 0 40px rgba(0, 0, 0, 0.2),<br>
+						0 0 0 50px rgba(0, 0, 0, 0.2),<br>
+						0 0 0 60px rgba(0, 0, 0, 0.2),<br>
+						0 0 0 70px rgba(0, 0, 0, 0.2),<br>
+						0 0 0 80px rgba(0, 0, 0, 0.2),<br>
+						0 0 0 90px rgba(0, 0, 0, 0.2);<br>
+			}
+		</code>
+	</div>
+
+	<div class="demo demo3">
+		<h3>测试指针事件</h3>
+		<p>css3中的pointer-events属性（auto:与没设之前效果一样；none： 效果消失；其他值只能用于svg）可以控制光标在鼠标点击、拖拽等事件的行为。将其设成none，就会使以下链接失效。</p>
+		<p>代码如下：</p>
+		<code>
+			.demo.demo3 a {<br>
+				pointer-events: none;<br>
+			}<br>
+		</code>
+		<a href="https://www.baidu.com">百度一下</a>
+	</div>
+
+	<div class="demo demo4">
+		<h3>测试书写模式</h3>
+		<p>css3中的writing-mode属性用于制定书写模式。目的为了解决非从左到右书写习惯的语言排版问题。</p>
+		<p>代码如下：</p>
+		<code>
+			.demo.demo4 .word {<br>
+				writing-mode: vertical-lr;<br>
+			}<br>
+		</code>
+		<p class="word">这是一段竖直从左到右排版的文字。</p>
+	</div>
+
+	<div class="demo demo5">
+		<h3>测试background-clip属性</h3>
+		<p>css3中的background-clip属性用于剪裁css元素。</p>
+		<p>下面是一段彩色文字：</p>
+		<p>代码如下：</p>
+		<code>
+			.demo.demo5 .wordColor {<br>
+				font-size: 40px;<br>
+				font-family: STXingKai;<br>
+				color: transparent;/*将文字设置颜色透明*/<br>
+				background: linear-gradient(to right, red, orange, yellow, green, blue,indigo, violet, transparent);/*线性渐变*/<br>
+				-webkit-background-clip: text; /*剪裁元素到文字（text）*/<br>
+				/*-webkit-background-clip与background属性顺序决定了是否clip生效，必须background设置渐变再有clip到text,否则将无用。*/<br>
+			}<br>
+		</code>
+		<p class="wordColor">这是利用background-clip与transparent属性制作的一段彩色文字。这里有个坑：就是必须要设置背景渐变，也就是要有背景色，后才能使-webkit-background-clip属性生效，也就是产生彩色文字效果。</p>
+	</div>
+</body>
+</html> 
