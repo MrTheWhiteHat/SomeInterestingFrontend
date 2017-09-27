@@ -90,5 +90,24 @@
 		</code>
 		<p class="wordColor">这是利用background-clip与transparent属性制作的一段彩色文字。这里有个坑：就是必须要设置背景渐变，也就是要有背景色，后才能使-webkit-background-clip属性生效，也就是产生彩色文字效果。</p>
 	</div>
+
+	<div class="demo demo6">
+		<h3>利用filter: blur();使背景图片模糊</h3>
+		<p></p>
+		
+		<p>代码如下：</p>
+		<code>
+		.demo.demo6 .bgimg {<br>
+			height: 200px;<br>
+			width: 600px;<br>
+			background-image: url(index.jpg);<br>
+			background-size: cover;/*尽量覆盖背景区域*/<br>
+			background-position: center center;/*图片展示的位置*/<br>
+			filter: blur(8px) sepia(50%);/*blur:模糊；sepia:怀旧*/<br>
+		}<br>
+		</code>
+		<p>效果如下：</p>
+		<div class="bgimg"></div>
+	</div>
 </body>
 </html> 

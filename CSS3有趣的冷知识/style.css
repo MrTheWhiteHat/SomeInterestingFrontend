@@ -67,3 +67,17 @@ body {
 	background: linear-gradient(to right, red, orange, yellow, green, blue,indigo, violet, transparent);
 	-webkit-background-clip: text;
 }
+
+.demo.demo6 {
+	height: 800px;
+	top: calc(100% + 3350px);
+}
+
+.demo.demo6 .bgimg {
+	height: 200px;
+	width: 600px;
+	background-image: url(index.jpg);
+	background-size: cover;
+	background-position: center center;
+	filter: blur(8px) sepia(50%);
+}
