@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>display各种属性测试</title>
+    <style>
+      div {
+        border: 5px solid;
+        border-color: rgba(0, 0, 0, .6);
+      }
+      span {
+        border: 5px solid;
+        border-color: rgba(255, 0, 0, .6);
+      }
+      .block {
+        display: block;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .inline {
+        display: inline;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .none {
+        display: none;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .inline-block {
+        display: inline-block;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .list-item {
+        display: list-item;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .run-in {
+        display: run-in;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .list-item {
+        display: list-item;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .list-item {
+        display: list-item;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .list-item {
+        display: list-item;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .list-item {
+        display: list-item;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .list-item {
+        display: list-item;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .list-item {
+        display: list-item;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .table {
+        display: table;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .inline-table {
+        display: inline-table;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .table-row-group {
+        display: table-row-group;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .table-header-group {
+        display: table-header-group;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .table-footer-group {
+        display: table-footer-group;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .table-row {
+        display: table-row;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .table-column-group {
+        display: table-column-group;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .table-column {
+        display: table-column;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .table-cell {
+        display: table-cell;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .table-caption {
+        display: table-caption;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .inherit {
+        display: inherit;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+      .compact {
+        display: compact;
+        border: 5px solid;
+        border-color: rgba(0, 255, 0, .6);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">display各种属性值测试</h1>
+    <div id="div1">
+      <h2>块级元素的block值</h2>
+      <div class="block">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素</div>
+      <div class="block">我是第二个div元素</div>
+      <div class="block">我是第三个div元素</div>
+      <div class="block">我是第四个div元素</div>
+      <div class="block">我是第五个div元素</div>
+      <hr>
+      <h2>行内元素的block值</h2>
+      <span class="block">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素</span>
+      <span class="block">我是第二个span元素</span>
+      <span class="block">我是第三个span元素</span>
+      <span class="block">我是第四个span元素</span>
+      <span class="block">我是第五个span元素</span>
+      <hr>
+      <h3>解释：block值显示为块级元素，元素前后会有换行符</h3>
+    </div>
+    <hr>
+    <div id="div2">
+      <h2>inline值</h2>
+      <div class="inline">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素</div>
+      <div class="inline">我是第二个div元素</div>
+      <div class="inline">我是第三个div元素</div>
+      <div class="inline">我是第四个div元素</div>
+      <div class="inline">我是第五个div元素</div>
+      <hr>
+      <h3>解释：inline值显示为内联元素，前后没有换行符。是display默认值，但显示也要考虑元素本身为什么元素。</h3>
+    </div>
+    <hr>
+    <div id="div3">
+      <h2>none值</h2>
+      <div class="none">我是第一个div元素</div>
+      <div class="none">我是第二个div元素</div>
+      <div class="none">我是第三个div元素</div>
+      <div class="none">我是第四个div元素</div>
+      <div class="none">我是第五个div元素</div>
+      <hr>
+      <h3>解释：none值元素不显示。</h3>
+    </div>
+    <hr>
+    <div id="div4">
+      <h2>inline-block值</h2>
+      <div class="inline-block">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素</div>
+      <div class="inline-block">我是第二个div元素</div>
+      <div class="inline-block">我是第三个div元素</div>
+      <div class="inline-block">我是第四个div元素</div>
+      <div class="inline-block">我是第五个div元素</div>
+      <hr>
+      <h3>解释：inline-block值行内块级元素。</h3>
+    </div>
+    <hr>
+    <div id="div5">
+      <h2>块级元素的list-item值</h2>
+      <div class="list-item">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素</div>
+      <div class="list-item">我是第二个div元素</div>
+      <div class="list-item">我是第三个div元素</div>
+      <div class="list-item">我是第四个div元素</div>
+      <div class="list-item">我是第五个div元素</div>
+      <hr>
+      <h2>行内元素的list-item值</h2>
+      <span class="list-item">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素</span>
+      <span class="list-item">我是第二个span元素</span>
+      <span class="list-item">我是第三个span元素</span>
+      <span class="list-item">我是第四个span元素</span>
+      <span class="list-item">我是第五个span元素</span>
+    </div>
+    <hr>
+    <div id="div6">
+      <h2>块级元素的默认值</h2>
+      <div class="">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素</div>
+      <div class="">我是第二个div元素</div>
+      <div class="">我是第三个div元素</div>
+      <div class="">我是第四个div元素</div>
+      <div class="">我是第五个div元素</div>
+      <hr>
+      <h2>行内元素的默认值</h2>
+      <span class="">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素</span>
+      <span class="">我是第二个span元素</span>
+      <span class="">我是第三个span元素</span>
+      <span class="">我是第四个span元素</span>
+      <span class="">我是第五个span元素</span>
+    </div>
+    <hr>
+    <div id="div7">
+      <h2>块级元素的run-in值</h2>
+      <div class="run-in">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素</div>
+      <div class="run-in">我是第二个div元素</div>
+      <div class="run-in">我是第三个div元素</div>
+      <div class="run-in">我是第四个div元素</div>
+      <div class="run-in">我是第五个div元素</div>
+      <hr>
+      <h2>行内元素的run-in值</h2>
+      <span class="run-in">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</span>
+      <span class="run-in">我是第二个span元素</span>
+      <span class="run-in">我是第三个span元素</span>
+      <span class="run-in">我是第四个span元素</span>
+      <span class="run-in">我是第五个span元素</span>
+      <hr>
+      <h3>解释：run-in值是根据上下文作为块级或内联元素进行显示的</h3>
+    </div>
+    <hr>
+    <div id="div8">
+      <h2>table值</h2>
+      <div class="table">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="table">我是第二个div元素</div>
+      <div class="table">我是第三个div元素</div>
+      <div class="table">我是第四个div元素</div>
+      <div class="table">我是第五个div元素</div>
+      <hr>
+      <h3>解释： 作为块级表格显示。前后有换行符。类似table。</h3>
+    </div>
+    <hr>
+    <div id="div9">
+      <h2>inline-table值</h2>
+      <div class="inline-table">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="inline-table">我是第二个div元素</div>
+      <div class="inline-table">我是第三个div元素</div>
+      <div class="inline-table">我是第四个div元素</div>
+      <div class="inline-table">我是第五个div元素</div>
+      <hr>
+      <h3>解释： 作为内联表格来显示。表格前后无换行符。类似table。</h3>
+    </div>
+    <hr>
+    <div id="div10">
+      <h2>table-row-group值</h2>
+      <div class="table-row-group">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="table-row-group">我是第二个div元素</div>
+      <div class="table-row-group">我是第三个div元素</div>
+      <div class="table-row-group">我是第四个div元素</div>
+      <div class="table-row-group">我是第五个div元素</div>
+      <hr>
+      <h3>解释： 作为一个或多个行分组来显示。类似tbody</h3>
+    </div>
+    <hr>
+    <div id="div11">
+      <h2>table-header-group值</h2>
+      <div class="table-header-group">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="table-header-group">我是第二个div元素</div>
+      <div class="table-header-group">我是第三个div元素</div>
+      <div class="table-header-group">我是第四个div元素</div>
+      <div class="table-header-group">我是第五个div元素</div>
+      <hr>
+      <h3>解释： 作为一个或多个行分组来显示。类似thead</h3>
+    </div>
+    <hr>
+    <div id="div12">
+      <h2>table-footer-group值</h2>
+      <div class="table-footer-group">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="table-footer-group">我是第二个div元素</div>
+      <div class="table-footer-group">我是第三个div元素</div>
+      <div class="table-footer-group">我是第四个div元素</div>
+      <div class="table-footer-group">我是第五个div元素</div>
+      <hr>
+      <h3>解释： 作为一个或多个行分组来显示。类似tfoot</h3>
+    </div>
+    <hr>
+    <div id="div13">
+      <h2>table-row值</h2>
+      <div class="table-row">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="table-row">我是第二个div元素</div>
+      <div class="table-row">我是第三个div元素</div>
+      <div class="table-row">我是第四个div元素</div>
+      <div class="table-row">我是第五个div元素</div>
+      <hr>
+      <h3>解释： 作为一个或多个行分组来显示。类似tr</h3>
+    </div>
+    <hr>
+    <div id="div14">
+      <h2>table-column-group值</h2>
+      <div class="table-column-group">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="table-column-group">我是第二个div元素</div>
+      <div class="table-column-group">我是第三个div元素</div>
+      <div class="table-column-group">我是第四个div元素</div>
+      <div class="table-column-group">我是第五个div元素</div>
+      <hr>
+      <h3>解释： 作为一个或者多个列的分组来显示。类似colgroup</h3>
+    </div>
+    <hr>
+    <div id="div15">
+      <h2>table-column值</h2>
+      <div class="table-column">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="table-column">我是第二个div元素</div>
+      <div class="table-column">我是第三个div元素</div>
+      <div class="table-column">我是第四个div元素</div>
+      <div class="table-column">我是第五个div元素</div>
+      <hr>
+      <h3>解释： 作为一个单元格列显示。类似col</h3>
+    </div>
+    <hr>
+    <div id="div16">
+      <h2>table-cell值</h2>
+      <div class="table-cell">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="table-cell">我是第二个div元素</div>
+      <div class="table-cell">我是第三个div元素</div>
+      <div class="table-cell">我是第四个div元素</div>
+      <div class="table-cell">我是第五个div元素</div>
+      <hr>
+      <h3>解释： 作为一个表格单元格。 类似td和th标签。</h3>
+    </div>
+    <hr>
+    <div id="div17">
+      <h2>table-caption值</h2>
+      <div class="table-caption">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="table-caption">我是第二个div元素</div>
+      <div class="table-caption">我是第三个div元素</div>
+      <div class="table-caption">我是第四个div元素</div>
+      <div class="table-caption">我是第五个div元素</div>
+      <hr>
+      <h3>解释： 作为一个表格标题显示类似<'caption>。</h3>
+    </div>
+    <hr>
+    <div id="div18">
+      <h2>inherit值</h2>
+      <div class="inherit">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="inherit">我是第二个div元素</div>
+      <div class="inherit">我是第三个div元素</div>
+      <div class="inherit">我是第四个div元素</div>
+      <div class="inherit">我是第五个div元素</div>
+      <hr>
+      <h3>解释： 继承父元素的display属性。</h3>
+    </div>
+    <hr>
+    <div id="div19">
+      <h2>compact值</h2>
+      <div class="compact">我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个div元素我是第一个span元素</div>
+      <div class="compact">我是第二个div元素</div>
+      <div class="compact">我是第三个div元素</div>
+      <div class="compact">我是第四个div元素</div>
+      <div class="compact">我是第五个div元素</div>
+      <hr>
+      <h3>解释： compact以及maker值被废除了。</h3>
+    </div>
+    <hr>
+  </body>
+</html>

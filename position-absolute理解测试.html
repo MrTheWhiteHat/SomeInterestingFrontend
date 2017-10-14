@@ -1,0 +1,96 @@
+<html>
+<head>
+<style type="text/css">
+*, *::before, *::after
+{
+ box-sizing: border-box;
+ color: #fff;
+ border-radius: 6px;
+}
+
+.grandfather
+{
+  width: 1200px;
+  height: 695px;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, transparent);
+}
+.father::before {
+  position: absolute;
+  bottom: 101%;
+  background: rgba(0, 0, 0, .5);
+  content: ".father { position: absolute; top: 50px; left: 50px }";
+}
+.father::after {
+  position: absolute;
+  writing-mode: vertical-rl;
+  right: 101%;
+  background: rgba(0, 0, 0, .5);
+  content: "我是'grandfather'";
+}
+.father {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  top: 50px;
+  left: 50px;
+  background: rgba(0, 0, 0, .8);
+}
+.me::before {
+  position: absolute;
+  bottom: 102%;
+  background: rgba(255, 255, 255, .5);
+  content: ".me { position: absolute; top: 50px; left: 50px }";
+}
+.me::after {
+  position: absolute;
+  writing-mode: vertical-rl;
+  right: 101%;
+  background: rgba(0, 0, 0, .5);
+  content: "我是'father'";
+}
+.me {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  top: 50px;
+  left: 50px;
+  background: radial-gradient(red, orange, yellow, green, blue, indigo, violet, transparent);
+}
+.h2::before {
+  position: absolute;
+  bottom: 102%;
+  background: rgba(255, 255, 255, .5);
+  font-size: 20px;
+  content: ".h2 { position: absolute; top: 50px; left: 50px }";
+}
+.h2::after {
+  position: absolute;
+  writing-mode: vertical-rl;
+  bottom: 64%;
+  right: 101%;
+  background: rgba(0, 0, 0, .5);
+  font-size: 20px;
+  content: "我是'me'";
+}
+.h2 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+</style>
+</head>
+<body>
+
+<div class="grandfather">
+  <div class="father">
+    <div class="me">
+      <h2 class="h2">打开控制台进行测试。测试结果： position: absolute;属性定位是相对于它的第一个(最挨近它的)且position值不为static的父元素进行定位。</h2>
+
+    <div>
+  </div>
+</div>
+
+</body>
+</html>
