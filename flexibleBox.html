@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flex弹性布局</title>
+        <style>
+            .flex-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                align-content: center;
+            }
+            .flex-item {
+                width: 20%;
+                height: 300px;
+                /* margin: 20px; */
+                border: 1px solid red;
+            }
+            .item0 {
+                /* width: 200px; */
+                flex-basis: 300px;
+                flex-shrink: 0;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="flex-item item0">11fdsfsafdsfs</div>
+            <div class="flex-item">12</div>
+            <div class="flex-item">13</div>
+            <div class="flex-item">13</div>
+            <div class="flex-item" style="height: 100px;">12</div>
+            <div class="flex-item" style="height: 200px;">13</div>
+            <div class="flex-item" style="height: 300px;">13</div>
+        </div>
+        <span class="flex-container">
+            <span class="flex-item" style="height: 100px;">1</span>
+            <span class="flex-item" style="height: 200px;">2</span>
+            <span class="flex-item" style="height: 300px;">3</span>
+        </span>
+    </body>
+</html>
